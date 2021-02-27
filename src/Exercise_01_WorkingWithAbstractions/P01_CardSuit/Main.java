@@ -1,5 +1,7 @@
 package Exercise_01_WorkingWithAbstractions.P01_CardSuit;
 
+import Exercise_01_WorkingWithAbstractions.CardSuit;
+
 import java.util.Arrays;
 
 public class Main {
