@@ -16,7 +16,5 @@ public class Main {
         Card card = new Card(CardRank.valueOf(cardRank), CardSuit.valueOf(cardSuit));
 
         System.out.println(card.toString());
-
-
     }
 }
