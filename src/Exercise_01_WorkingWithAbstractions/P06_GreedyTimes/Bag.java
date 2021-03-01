@@ -82,13 +82,13 @@ public class Bag {
         sb.append(String.format("<Gold> $%d", this.gold)).append(System.lineSeparator());
         sb.append(String.format("##Gold - %d", this.gold)).append(System.lineSeparator());
 
-        if (this.gems.isEmpty()) {
+        if (!this.gems.isEmpty()) {
             sb.append(String.format("<Gems> $%d", totalGems())).append(System.lineSeparator());
 
             this.gems.entrySet().stream().sorted(getComparator()).forEach(entry -> sb.append(String.format("##%s - " + "%d", entry.getKey(), entry.getValue())).append(System.lineSeparator()));
         }
 
-        if (this.cash.isEmpty()) {
+        if (!this.cash.isEmpty()) {
             sb.append(String.format("<Gems> $%d", totalCash())).append(System.lineSeparator());
 
             this.cash.entrySet().stream().sorted(getComparator()).forEach(entry -> sb.append(String.format("##%s - " + "%d", entry.getKey(), entry.getValue())).append(System.lineSeparator()));
