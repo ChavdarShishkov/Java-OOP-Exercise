@@ -79,8 +79,11 @@ public class Bag {
 
     public void printContent() {
         StringBuilder sb = new StringBuilder();
-        sb.append(String.format("<Gold> $%d", this.gold)).append(System.lineSeparator());
-        sb.append(String.format("##Gold - %d", this.gold)).append(System.lineSeparator());
+
+        if (this.gold > 0) {
+            sb.append(String.format("<Gold> $%d", this.gold)).append(System.lineSeparator());
+            sb.append(String.format("##Gold - %d", this.gold)).append(System.lineSeparator());
+        }
 
         if (!this.gems.isEmpty()) {
             sb.append(String.format("<Gems> $%d", totalGems())).append(System.lineSeparator());
