@@ -9,9 +9,15 @@ public class TrafficLight {
 
     public void update() {
         switch (this.state) {
-            case RED -> this.state = TrafficLightState.GREEN;
-            case GREEN -> this.state = TrafficLightState.YELLOW;
-            case YELLOW -> this.state = TrafficLightState.RED;
+            case RED:
+                this.state = TrafficLightState.GREEN;
+                break;
+            case GREEN:
+                this.state = TrafficLightState.YELLOW;
+                break;
+            case YELLOW:
+                this.state = TrafficLightState.RED;
+                break;
         }
     }
 
