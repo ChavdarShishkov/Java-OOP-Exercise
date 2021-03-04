@@ -9,19 +9,25 @@ public class Main {
 
         String[] pizzaTokens = reader.readLine().split("\\s+");
         String[] doughTokens = reader.readLine().split("\\s+");
-        int countOfToppings = Integer.parseInt(pizzaTokens[2]);
 
-        Pizza pizza = new Pizza(pizzaTokens[1], countOfToppings);
-        Dough dough = new Dough(doughTokens[1], doughTokens[2], Double.parseDouble(doughTokens[3]));
-        String input = reader.readLine();
+        try {
+            int countOfToppings = Integer.parseInt(pizzaTokens[2]);
 
-        for (int i = 0; i < countOfToppings; i++) {
-            String[] toppingTokens = reader.readLine().split("\\s+");
-            Topping topping = new Topping(toppingTokens[1], Double.parseDouble(toppingTokens[2]));
+            Pizza pizza = new Pizza(pizzaTokens[1], countOfToppings);
+            Dough dough = new Dough(doughTokens[1], doughTokens[2], Double.parseDouble(doughTokens[3]));
 
-            pizza.addTopping(topping);
+            pizza.setDough(dough);
+
+            for (int i = 0; i < countOfToppings; i++) {
+                String[] toppingTokens = reader.readLine().split("\\s+");
+                Topping topping = new Topping(toppingTokens[1], Double.parseDouble(toppingTokens[2]));
+
+                pizza.addTopping(topping);
+            }
+
+            System.out.printf("%s - %.2f", pizza.getName(), pizza.getOverallCalories());
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
         }
-
-        System.out.printf("%s - %.2f", pizza.getName(), pizza.getOverallCalories());
     }
 }

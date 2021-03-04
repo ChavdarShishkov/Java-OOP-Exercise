@@ -11,7 +11,7 @@ public class Topping {
 
     private void setToppingType(String toppingType) {
         if (!toppingType.equals("Meat") && !toppingType.equals("Veggies") && !toppingType.equals("Cheese") && !toppingType.equals("Sauce")) {
-            throw new IllegalArgumentException(String.format("cannot place %s on top of you pizza.", toppingType));
+            throw new IllegalArgumentException(String.format("Cannot place %s on top of you pizza.", toppingType));
         }
         this.toppingType = toppingType;
     }

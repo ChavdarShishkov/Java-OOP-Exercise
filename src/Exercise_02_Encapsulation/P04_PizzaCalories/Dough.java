@@ -12,15 +12,15 @@ public class Dough {
     }
 
     private void setFlourType(String flourType) {
-        if (!flourType.equals("White") && !flourType.equals("Wholewheat")) {
-            throw new IllegalArgumentException("invalid type of dough.");
+        if (!flourType.equals("White") && !flourType.equals("Wholegrain")) {
+            throw new IllegalArgumentException("Invalid type of dough.");
         }
         this.flourType = flourType;
     }
 
     private void setBakingTechnique(String bakingTechnique) {
         if (!flourType.equals("Crispy") && !flourType.equals("Chewy") && !flourType.equals("Homemade")) {
-            throw new IllegalArgumentException("invalid type of dough.");
+            throw new IllegalArgumentException("Invalid type of dough.");
         }
         this.bakingTechnique = bakingTechnique;
     }
