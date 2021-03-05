@@ -14,7 +14,11 @@ public class Vehicle {
     }
 
     public void drive(double kilometers) {
+        double remainingFuel = this.getFuel() - (kilometers + this.getFuelConsumption());
 
+        if (remainingFuel >= 0) {
+            this.setFuel(remainingFuel);
+        }
     }
 
     public static double getDefaultFuelConsumption() {
