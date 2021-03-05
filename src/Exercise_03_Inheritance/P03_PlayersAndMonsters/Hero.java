@@ -19,7 +19,7 @@ public class Hero {
 
     @Override
     public String toString() {
-        return String.format("Type: %s Username: %s Level: %s", this.getClass().getName(), this.getUsername(),
+        return String.format("Type: %s Username: %s Level: %s", this.getClass().getSimpleName(), this.getUsername(),
                 this.getLevel());
     }
 }
